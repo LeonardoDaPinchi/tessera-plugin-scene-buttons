@@ -9,7 +9,19 @@ tiles:
       label2: F
       scene3: scene.living_room_normal_warm
       label3: N
-    sizes: [2x1]
+    sizes: [2x1, 1x1]
+  - tile: keys
+    name: Accent keys, small letters
+    options:
+      scene1: scene.living_room_ambiental_warm
+      label1: Ambient
+      scene2: scene.living_room_full_warm
+      label2: Full
+      scene3: scene.living_room_normal_warm
+      label3: Normal
+      text_size: small
+      key_style: accent
+    sizes: [2x1, 4x1]
   - tile: keys
     name: Two scenes
     options:

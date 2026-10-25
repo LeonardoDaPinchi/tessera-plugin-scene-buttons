@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5.0
+- The tile can be resized from 1x1 to 4x2 (before it was 2x1 only, which the editor did not let you choose). On a
+  1x1 tile the keys stand in two rows.
+- New options: **Size of the letters** (auto, small up to largest) and **Key colour** (raised or accent). Nothing to
+  change: the defaults look as before.
+
 ## 0.4.0
 - The tile is now only the keys: up to three letters on a 2x1 tile, each turning on a scene. The light, the "..." key,
   the card and the tap on the tile are gone: use Tessera's own light tile beside it.

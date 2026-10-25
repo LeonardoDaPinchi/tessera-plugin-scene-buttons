@@ -14,6 +14,17 @@
     "scene_hint": "Een scène-entiteit zoals scene.woonkamer_normaal. Leeg: de toets verschijnt niet.",
     "label1": "Letter op toets 1",
     "label2": "Letter op toets 2",
-    "label3": "Letter op toets 3"
+    "label3": "Letter op toets 3",
+    "text_size": "Grootte van de letters",
+    "text_size_hint": "Auto neemt de grootste die op de toets past. Een maat die te groot is voor de toets of de tegel wordt kleiner gemaakt.",
+    "size_auto": "Auto",
+    "size_small": "Klein",
+    "size_medium": "Middel",
+    "size_large": "Groot",
+    "size_xlarge": "Extra groot",
+    "size_xxlarge": "Grootst",
+    "key_style": "Kleur van de toetsen",
+    "style_raised": "Verhoogd (grijs)",
+    "style_accent": "Accentkleur"
   }
 }

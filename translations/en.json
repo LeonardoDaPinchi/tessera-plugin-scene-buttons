@@ -14,6 +14,17 @@
     "scene_hint": "A scene entity such as scene.living_room_normal. Left empty, the key is not shown.",
     "label1": "Letter on key 1",
     "label2": "Letter on key 2",
-    "label3": "Letter on key 3"
+    "label3": "Letter on key 3",
+    "text_size": "Size of the letters",
+    "text_size_hint": "Auto takes the largest that fits the key. A size too large for the key or the tile is made smaller.",
+    "size_auto": "Auto",
+    "size_small": "Small",
+    "size_medium": "Medium",
+    "size_large": "Large",
+    "size_xlarge": "Extra large",
+    "size_xxlarge": "Largest",
+    "key_style": "Key colour",
+    "style_raised": "Raised (grey)",
+    "style_accent": "Accent colour"
   }
 }

@@ -1,8 +1,8 @@
-# Scene buttons: a 2x1 tile of up to three keys, each a letter. A tap on a key turns on its scene (scene.turn_on). It is
+# Scene buttons: a tile of up to three keys, each a letter, from 1x1 (two rows) to 4x2. A tap on a key turns on its scene (scene.turn_on). It is
 # the row of sub-buttons of a Bubble Card button, without the button: put Tessera's own light tile beside it for the
 # light itself. Every field is explained in docs/MANIFEST.md of tessera-plugins.
 id: scene_buttons
-version: 0.4.0
+version: 0.5.0
 api: "0.10"
 icon: gesture-tap-button
 maintainer: LeonardoDaPinchi
@@ -22,8 +22,8 @@ tiles:
   - id: keys
     name: tile_name
     icon: gesture-tap-button
-    sizes: { min: 2x1, max: 2x1 }
-    memory: 500
+    sizes: { min: 1x1, max: 4x2 }
+    memory: 600
     example: tile_example
     options:
       - { id: scene1, kind: text, label: scene1, hint: scene_hint }
@@ -32,3 +32,24 @@ tiles:
       - { id: label2, kind: text, label: label2, default: F }
       - { id: scene3, kind: text, label: scene3, hint: scene_hint }
       - { id: label3, kind: text, label: label3, default: N }
+      # How the keys look: the size of the letter (the largest that fits, or one the key is made to fit), and whether a key
+      # is a raised field or the screen's accent colour.
+      - id: text_size
+        kind: choice
+        label: text_size
+        hint: text_size_hint
+        default: auto
+        choices:
+          - { value: auto, label: size_auto }
+          - { value: small, label: size_small }
+          - { value: medium, label: size_medium }
+          - { value: large, label: size_large }
+          - { value: xlarge, label: size_xlarge }
+          - { value: xxlarge, label: size_xxlarge }
+      - id: key_style
+        kind: choice
+        label: key_style
+        default: raised
+        choices:
+          - { value: raised, label: style_raised }
+          - { value: accent, label: style_accent }
