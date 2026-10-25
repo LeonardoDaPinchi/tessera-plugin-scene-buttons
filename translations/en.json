@@ -1,25 +1,13 @@
 {
   "_meta": { "name": "English" },
   "screen": {
-    "on": "On",
-    "off": "Off",
-    "unavailable": "Unavailable",
-    "choose_light": "Choose a light",
-    "power_on": "Turn on",
-    "power_off": "Turn off",
-    "pct": "{pct} %",
-    "on_pct": "On · {pct} %"
+    "choose_scenes": "Choose scenes"
   },
   "app": {
     "name": "Scene buttons",
-    "summary": "A light tile with keys that turn on your scenes, and a tap that switches the light on and off.",
+    "summary": "A row of up to three keys on one tile, each turning on a scene of your choice.",
     "tile_name": "Scene buttons",
-    "tile_example": "Living room ceiling, with keys N, A and F",
-    "card_name": "Light",
-    "press": "Tap when off",
-    "press_hint": "A button such as input_button.living_room_on. Left empty, a tap turns the light on.",
-    "press_off": "Tap when on",
-    "press_off_hint": "A button that turns the light off. Left empty, a tap turns the light off.",
+    "tile_example": "Three keys: A, F and N",
     "scene1": "Scene of key 1",
     "scene2": "Scene of key 2",
     "scene3": "Scene of key 3",
