@@ -1,8 +1,8 @@
-# Scene buttons: a light tile with up to three small keys on it. A tap on the tile presses an input_button (or toggles
-# the light when none is chosen); a tap on a key turns on a scene. It is the Tessera version of a Bubble Card button
+# Scene buttons: a light tile with up to three small keys on it. A tap on the tile switches the light (on to off, off
+# to on, or presses the buttons you chose for each); a tap on a key turns on a scene. It is the Tessera version of a Bubble Card button
 # with sub-buttons. Every field is explained in docs/MANIFEST.md of tessera-plugins.
 id: scene_buttons
-version: 0.1.0
+version: 0.2.0
 api: "0.10"
 icon: gesture-tap-button
 maintainer: LeonardoDaPinchi
@@ -15,9 +15,9 @@ boards: any
 flash_kb: 4
 
 permissions:
-  # Every action the tile may call. input_button.press and light.toggle go to the entity named in an option or the
-  # tile's own light; scene.turn_on goes to the scenes named in the options.
-  home_assistant_actions: [input_button.press, light.toggle, scene.turn_on]
+  # Every action the tile may call. input_button.press goes to the buttons named in the options; light.turn_on,
+  # light.turn_off and light.toggle to the tile's own light; scene.turn_on to the scenes named in the options.
+  home_assistant_actions: [input_button.press, light.turn_on, light.turn_off, light.toggle, scene.turn_on]
 
 tiles:
   - id: buttons
@@ -33,6 +33,7 @@ tiles:
     preview: { title: "{name}", value: "{state}" }
     options:
       - { id: press, kind: text, label: press, hint: press_hint }
+      - { id: press_off, kind: text, label: press_off, hint: press_off_hint }
       - { id: scene1, kind: text, label: scene1, hint: scene_hint }
       - { id: label1, kind: text, label: label1, default: N }
       - { id: scene2, kind: text, label: scene2, hint: scene_hint }

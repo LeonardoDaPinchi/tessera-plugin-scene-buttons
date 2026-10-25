@@ -26,6 +26,7 @@ class ButtonsTile : public tessera::Tile {
     entity_ = tessera::Text(c.entity);
     name_text_ = tessera::Text(c.name);
     press_ = tessera::Text(c.options["press"] | "");
+    press_off_ = tessera::Text(c.options["press_off"] | "");
 
     // The keys: only those with a scene, each a square a finger finds, at the right edge, in the middle of the height.
     static const char *const SCENE_IDS[MAX_KEYS] = {"scene1", "scene2", "scene3"};
@@ -105,11 +106,16 @@ class ButtonsTile : public tessera::Tile {
         }
       }
     }
-    // Anywhere else: the button chosen for the tile, or the light itself.
-    if (press_.size() > 0) {
+    // Anywhere else the tap switches the light. On: the "when on" button, or turn it off. Off: the "when off" button, or
+    // turn it on. A state that is neither (unavailable, unknown) toggles, as Home Assistant's own tile would.
+    const std::string st = plain(state_);
+    if (st == "on") {
+      if (press_off_.size() > 0) tessera::action("input_button.press", plain(press_off_));
+      else if (entity_.size() > 0) tessera::action("light.turn_off", plain(entity_));
+    } else if (press_.size() > 0) {
       tessera::action("input_button.press", plain(press_));
     } else if (entity_.size() > 0) {
-      tessera::action("light.toggle", plain(entity_));
+      tessera::action(st == "off" ? "light.turn_on" : "light.toggle", plain(entity_));
     }
   }
 
@@ -143,7 +149,7 @@ class ButtonsTile : public tessera::Tile {
   const tessera::Plugin *plugin_;
   int width_ = 0, height_ = 0, pad_ = 0, gap_ = 0, key_size_ = 0, key_count_ = 0, keys_left_ = 0;
   int brightness_pct_ = -1;
-  tessera::Text entity_, name_text_, press_, state_;
+  tessera::Text entity_, name_text_, press_, press_off_, state_;
   Key keys_[MAX_KEYS];
   lv_obj_t *name_{}, *state_line_{};
 };
