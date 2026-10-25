@@ -5,6 +5,9 @@
     "off": "Off",
     "unavailable": "Unavailable",
     "choose_light": "Choose a light",
+    "power_on": "Turn on",
+    "power_off": "Turn off",
+    "pct": "{pct} %",
     "on_pct": "On · {pct} %"
   },
   "app": {
@@ -12,6 +15,7 @@
     "summary": "A light tile with keys that turn on your scenes, and a tap that switches the light on and off.",
     "tile_name": "Scene buttons",
     "tile_example": "Living room ceiling, with keys N, A and F",
+    "card_name": "Light",
     "press": "Tap when off",
     "press_hint": "A button such as input_button.living_room_on. Left empty, a tap turns the light on.",
     "press_off": "Tap when on",

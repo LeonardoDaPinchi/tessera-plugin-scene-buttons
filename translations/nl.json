@@ -5,6 +5,9 @@
     "off": "Uit",
     "unavailable": "Niet beschikbaar",
     "choose_light": "Kies een lamp",
+    "power_on": "Aanzetten",
+    "power_off": "Uitzetten",
+    "pct": "{pct} %",
     "on_pct": "Aan · {pct} %"
   },
   "app": {
@@ -12,6 +15,7 @@
     "summary": "Een lampentegel met toetsen die je scènes aanzetten, en een tik die de lamp aan- en uitzet.",
     "tile_name": "Scènetoetsen",
     "tile_example": "Plafondlamp woonkamer, met toetsen N, A en F",
+    "card_name": "Lamp",
     "press": "Tik als uit",
     "press_hint": "Een knop zoals input_button.woonkamer_aan. Leeg: een tik zet de lamp aan.",
     "press_off": "Tik als aan",

@@ -25,3 +25,6 @@ tiles:
 states:
   light.living_room_ceiling: { state: "on", name: Living Room Ceiling, attributes: { brightness: 204 } }
   light.hall: { state: "off", name: Hall, attributes: {} }
+
+cards:
+  - { card: light, entity: light.living_room_ceiling }
