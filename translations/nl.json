@@ -1,0 +1,25 @@
+{
+  "_meta": { "name": "Nederlands" },
+  "screen": {
+    "on": "Aan",
+    "off": "Uit",
+    "unavailable": "Niet beschikbaar",
+    "choose_light": "Kies een lamp",
+    "on_pct": "Aan · {pct} %"
+  },
+  "app": {
+    "name": "Scènetoetsen",
+    "summary": "Een lampentegel met toetsen die je scènes aanzetten, en een tik die een knop naar keuze indrukt.",
+    "tile_name": "Scènetoetsen",
+    "tile_example": "Plafondlamp woonkamer, met toetsen N, A en F",
+    "press": "Tik op de tegel",
+    "press_hint": "Een entiteit zoals input_button.woonkamer_aan. Leeg: een tik schakelt de lamp.",
+    "scene1": "Scène van toets 1",
+    "scene2": "Scène van toets 2",
+    "scene3": "Scène van toets 3",
+    "scene_hint": "Een scène-entiteit zoals scene.woonkamer_normaal. Leeg: de toets verschijnt niet.",
+    "label1": "Letter op toets 1",
+    "label2": "Letter op toets 2",
+    "label3": "Letter op toets 3"
+  }
+}

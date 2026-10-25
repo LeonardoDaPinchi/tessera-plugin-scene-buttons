@@ -1,0 +1,27 @@
+# What tools/preview.py shows: the tile on every kind of screen (docs/PREVIEW.md).
+tiles:
+  - tile: buttons
+    name: Living Room Ceiling
+    entity: light.living_room_ceiling
+    options:
+      press: input_button.living_room_on
+      scene1: scene.living_room_normal_warm
+      label1: N
+      scene2: scene.living_room_ambiental_warm
+      label2: A
+      scene3: scene.living_room_full_warm
+      label3: F
+  - tile: buttons
+    name: Hall
+    entity: light.hall
+    options:
+      scene1: scene.hall_bright
+      label1: B
+    sizes: [2x1]
+  - tile: buttons
+    name: No light yet
+    sizes: [2x1]
+
+states:
+  light.living_room_ceiling: { state: "on", name: Living Room Ceiling, attributes: { brightness: 204 } }
+  light.hall: { state: "off", name: Hall, attributes: {} }

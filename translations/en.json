@@ -1,0 +1,25 @@
+{
+  "_meta": { "name": "English" },
+  "screen": {
+    "on": "On",
+    "off": "Off",
+    "unavailable": "Unavailable",
+    "choose_light": "Choose a light",
+    "on_pct": "On · {pct} %"
+  },
+  "app": {
+    "name": "Scene buttons",
+    "summary": "A light tile with keys that turn on your scenes, and a tap that presses a button of your choice.",
+    "tile_name": "Scene buttons",
+    "tile_example": "Living room ceiling, with keys N, A and F",
+    "press": "Tap on the tile",
+    "press_hint": "An entity such as input_button.living_room_on. Left empty, a tap toggles the light.",
+    "scene1": "Scene of key 1",
+    "scene2": "Scene of key 2",
+    "scene3": "Scene of key 3",
+    "scene_hint": "A scene entity such as scene.living_room_normal. Left empty, the key is not shown.",
+    "label1": "Letter on key 1",
+    "label2": "Letter on key 2",
+    "label3": "Letter on key 3"
+  }
+}

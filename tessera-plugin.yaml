@@ -1,0 +1,41 @@
+# Scene buttons: a light tile with up to three small keys on it. A tap on the tile presses an input_button (or toggles
+# the light when none is chosen); a tap on a key turns on a scene. It is the Tessera version of a Bubble Card button
+# with sub-buttons. Every field is explained in docs/MANIFEST.md of tessera-plugins.
+id: scene_buttons
+version: 0.1.0
+api: "0.10"
+icon: gesture-tap-button
+maintainer: LeonardoDaPinchi
+license: MIT
+stage: beta
+topics: [home]
+requires:
+  esphome: 2026.6.2
+boards: any
+flash_kb: 4
+
+permissions:
+  # Every action the tile may call. input_button.press and light.toggle go to the entity named in an option or the
+  # tile's own light; scene.turn_on goes to the scenes named in the options.
+  home_assistant_actions: [input_button.press, light.toggle, scene.turn_on]
+
+tiles:
+  - id: buttons
+    name: tile_name
+    icon: gesture-tap-button
+    sizes: { min: 2x1, max: 4x2 }
+    memory: 600
+    # The light the tile shows: its state and brightness. light is a domain Tessera draws a tile for, so its entity
+    # reaches the plugin on the released firmware too.
+    domains: [light]
+    attributes: [brightness]
+    example: tile_example
+    preview: { title: "{name}", value: "{state}" }
+    options:
+      - { id: press, kind: text, label: press, hint: press_hint }
+      - { id: scene1, kind: text, label: scene1, hint: scene_hint }
+      - { id: label1, kind: text, label: label1, default: N }
+      - { id: scene2, kind: text, label: scene2, hint: scene_hint }
+      - { id: label2, kind: text, label: label2, default: A }
+      - { id: scene3, kind: text, label: scene3, hint: scene_hint }
+      - { id: label3, kind: text, label: label3, default: F }
